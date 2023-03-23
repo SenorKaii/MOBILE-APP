@@ -1,0 +1,202 @@
+ion-content {
+	background: url("/assets/lounge.jpg") 0 0/100% 100% no-repeat;
+	--offset-bottom: auto!important;
+	--overflow: hidden;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		display: none;
+  }
+}
+
+#lounge {
+    color: hsl(0, 0%, 28%);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  #lounge {
+    padding: 15px;
+    margin-top: 10px;
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 270px;
+    }
+    100% {
+      background-position: 270px;
+    }
+  }
+
+$colorMain: #AB2330;
+$colorBackground: #edddc4;
+
+.banner{
+  display:inline-block;
+  background: $colorMain;
+  color:$colorBackground;
+  padding:5px 30px 5px 5px;
+  border-top:1px solid $colorBackground;
+  border-bottom:1px solid $colorBackground;
+  box-shadow:0px 3px 0 $colorMain, 0 -3px $colorMain;
+  position:relative;
+}
+
+.banner:before{
+  content:"";
+  position:absolute;
+  right:-18px;
+  top:-4px;
+  width: 0;
+  height: 0;
+  border-style: solid; 
+  border-width: 25px 18px 0 0;
+  border-color: $colorMain transparent transparent transparent;
+}
+
+.banner--inner:after{
+  content:"";
+  position:absolute;
+  right:-18px;
+  bottom:-4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 0 18px;
+  border-color: transparent transparent transparent $colorMain;
+  box-shadow:0 1px 0 $colorBackground;
+}
+.banner--inner:before{
+  content:"";
+  position:absolute;
+  right:-10px;
+  top:0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 10px 0 0;
+  border-color: $colorMain transparent transparent transparent;
+  box-shadow:0 -1px 0 $colorBackground;
+}
+.banner:after{
+  content:"";
+  position:absolute;
+  right:-10px;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 0 10px;
+  border-color: transparent transparent transparent $colorMain;
+  box-shadow:0 1px 0 $colorBackground;
+}
+
+.banner--content:after{
+  content:"";
+  background-image:url('https://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons-256/glossy-black-icons-symbols-shapes/018681-glossy-black-icon-symbols-shapes-decor2.png');
+  width:32px;
+  height:32px; 
+  background-size:100%;
+  position:absolute;
+  top:0;
+  background-repeat:no-repeat;
+}
+
+/* First Container */
+#container1 {
+	padding: 1px;
+}
+
+#container1 .music {
+	text-align: center;
+	background: url("/assets/musicbg.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#container1 .music h1 {
+	color: white;
+	font-size: 15px;
+	margin: 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* Second Container */
+#container2 {
+	padding: 1px;
+}
+
+#container2 .podcast {
+	text-align: center;
+	background: url("/assets/pianobg.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#container2 .podcast h1 {
+	color: white;
+	font-size: 15px;
+	margin: 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#container2 .podcast h2 {
+	color: white;
+	font-size: 15px;
+	margin: -50px 0px 20px 0px;
+	text-align: center;
+}
+
+#container2 button {
+    border-radius:  7px;
+	border: 0;
+	background: #191414;
+	color: #fff;
+	padding:  10px;
+	margin:  0 0 3px 0;
+	width: 100%;
+	cursor: pointer;
+}
+
+#container2 button:hover {
+    background: #1Db954;
+}
+
+/* Third Container */
+#container3 {
+	padding: 1px;
+}
+
+#container3 .gamesbox {
+	text-align: center;
+	background: url("/assets/minigamesbg.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#container3 .gamesbox h1 {
+	color: white;
+	font-size: 15px;
+	margin: 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}

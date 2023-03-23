@@ -1,0 +1,48 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Timetable
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="container">
+      <p>
+        Schedule your time properly
+        <span>
+          Custom Your Timetable
+        </span>
+        &mdash; University Polytech Malaysia &mdash;
+      </p>
+    </div>
+    <ion-grid>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of timetable">
+            <td>{{ row.time }}</td>
+            <td (click)="editCell(row, 0)" contenteditable="true">{{ row.days[0] }}</td>
+            <td (click)="editCell(row, 1)" contenteditable="true">{{ row.days[1] }}</td>
+            <td (click)="editCell(row, 2)" contenteditable="true">{{ row.days[2] }}</td>
+            <td (click)="editCell(row, 3)" contenteditable="true">{{ row.days[3] }}</td>
+            <td (click)="editCell(row, 4)" contenteditable="true">{{ row.days[4] }}</td>
+          </tr>    
+        </tbody>
+      </table>
+    </ion-grid>
+  </ion-content>
+</ion-app>

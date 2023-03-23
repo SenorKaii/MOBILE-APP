@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Write Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item lines="none">
+      <ion-input placeholder="Title" type="text" [(ngModel)]="post.title" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Category:</ion-label>
+      <ion-select value="Personal" okText="Select" [(ngModel)]="post.category" cancelText="Close">
+        <ion-select-option value="Personal">Personal</ion-select-option>
+        <ion-select-option value="Work">Work</ion-select-option>
+        <ion-select-option value="Shopping">Shopping</ion-select-option>
+        <ion-select-option value="Other">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-textarea placeholder="Start typing" rows="20" type="text" [(ngModel)]="post.description"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" (click)="createPost(post)"><ion-icon slot="start" name="send"></ion-icon>Save Note</ion-button>
+  </ion-card>
+</ion-content>

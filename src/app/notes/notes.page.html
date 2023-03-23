@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Notes
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button [routerLink]="['/createnotes']">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <ion-chip color="warning">All</ion-chip>
+
+    <ion-list lines="none">
+      <ion-item class="no-padding" (click)="presentActionSheet(post.id)" *ngFor="let post of posts" color="warning">
+        <ion-label>
+            <h2><b>{{ post.title }}</b></h2>
+            <p><i>{{ post.category }}</i></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="wrapper">
+      <div class="candles">
+        <div class="light__wave"></div>
+        <div class="candle1">
+          <div class="candle1__body">
+            <div class="candle1__eyes">
+              <span class="candle1__eyes-one"></span>
+              <span class="candle1__eyes-two"></span>
+            </div>
+            <div class="candle1__mouth"></div>
+          </div>
+          <div class="candle1__stick"></div>
+        </div>
+        
+        <div class="candle2">
+          <div class="candle2__body">
+            <div class="candle2__eyes">
+              <div class="candle2__eyes-one"></div>
+              <div class="candle2__eyes-two"></div>
+            </div>
+          </div>
+          <div class="candle2__stick"></div>
+        </div>
+        <div class="candle2__fire"></div>
+        <div class="sparkles-one"></div>
+        <div class="sparkles-two"></div>
+        <div class="candle__smoke-one"></div>
+        <div class="candle__smoke-two"></div>  
+      </div>
+      <div class="floor"></div>
+    </div>
+  </ion-content>
+</ion-app>

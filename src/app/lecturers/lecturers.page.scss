@@ -1,0 +1,17 @@
+ion-content {
+	background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16584/retina_wood.png') 0 0/100% 100% no-repeat;
+	--offset-bottom: auto!important;
+	--overflow: hidden;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		display: none;
+  }
+}
+
+ion-item {
+    --background: bisque;
+}
+
+ion-list {
+    background-color: bisque;
+}

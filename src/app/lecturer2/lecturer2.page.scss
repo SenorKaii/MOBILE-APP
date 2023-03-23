@@ -1,0 +1,155 @@
+ion-content {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px),
+    linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    
+    // overwrite inline styles
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+  }
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 100px;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-30px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 2s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
+
+p {
+	font-size: 15px;
+	font-weight: light;
+	color: #eeeeee;
+}
+
+h1 {
+	font-size: 18px;
+	margin: 5px 0 0 0;
+	font-weight: bold;
+	text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+
+.content {
+	width: 100%;
+	max-width: 600px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+.faculty {
+    font-family: 'Poppins', sans-serif;
+    margin-left: -40px;
+}
+
+ul {
+  position: relative;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+label {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  z-index: 100;
+}
+
+.alphabet {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background: #18191f;
+  color: #555;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 4px;
+  border-radius: 20px;
+  box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+    4px 4px 6px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"]:checked ~ .alphabet {
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

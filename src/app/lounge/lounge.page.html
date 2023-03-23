@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Lounge
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <h1 class="ion-text-center" id="lounge">A Place <br> To Help You <br> Relieve Stress</h1>
+
+    <div class="banner"><div class="banner--inner"><span class="banner--content">MUSIC</span></div></div>
+
+    <br><br>
+
+    <div id="container1">
+			<div class="music">
+				<h1><b>LISTENING TO LIVE RELAXING MUSIC</b></h1>
+				<iframe frameborder="0" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1"></iframe>
+			</div>
+		</div>
+
+    <br><br>
+
+    <div class="banner"><div class="banner--inner"><span class="banner--content">PODCAST</span></div></div>
+
+    <br><br>
+    
+    <div id="container2">
+      <div class="podcast">
+        <h1><b>LISTENING TO PODCAST</b></h1>
+        <iframe id="ytplayer" style="border-radius:12px" src="https://open.spotify.com/embed/episode/4jkYVn5LVaqUWjY6AReESD?utm_source=generator" frameBorder="0" loading="lazy"></iframe>
+        <h2><b>Pick an episode..</b></h2>
+      </div>
+      <div class="podcast">
+        <button (click)="changeVideo1()">EDUCATION <br> <i>Dream Big: New Motivational Compilation for Succes &amp; Studying</i></button>
+        <button (click)="changeVideo2()">DOCUMENTARY <br> <i>Dullahan: The Headless Horseman</i></button>
+        <button (click)="changeVideo3()">FITNESS &amp; NUTRITION <br> <i>Releasing Trauma: Meditation To Reduce Stress</i></button>
+      </div>
+      <div class="podcast">
+        <button (click)="changeVideo4()">POP CULTURE <br> <i>The Sandman: Dreamcast Complete Experience</i></button>
+        <button (click)="changeVideo5()">ISLAMIC <br> <i>Mishary Rashid Alafasy: Al-Kahf</i></button>
+        <button (click)="changeVideo6()">COMEDY <br> <i>A Conversation About What Our Country Needs, With Syed Saddiq</i></button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="banner"><div class="banner--inner"><span class="banner--content">MINIGAME</span></div></div>
+
+    <br><br>
+
+    <div id="container3">
+      <div class="gamesbox">
+        <h1><b>PLAY GATHIC PHONE</b></h1>
+        <iframe width="300" height="300" frameborder="0" src="https://gartic.io/"></iframe>
+      </div>
+    </div>
+
+    <br>
+  </ion-content>
+</ion-app>

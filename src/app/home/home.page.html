@@ -1,0 +1,86 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Home
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <h1 class="ion-text-center" id="welcome">Welcome To UPTM Student Tools</h1>
+
+    <div class="box">
+      <img src="assets/uptm.png" alt="uptm" id="uptm">
+    </div>
+
+    <img src="assets/college.gif" alt="uptm" id="college">
+    
+    <br><br><br>
+
+    <div class="banner"><div class="banner--inner"><span class="banner--content">NEWS & HIGHLIGHTS</span></div></div>
+    
+    <br><br><br>
+
+    <ion-slides [options]="slideOptsOne">
+      <ion-slide *ngFor="let news of newsList">
+        <img [src]="news.image">
+      </ion-slide>
+    </ion-slides>
+
+    <div class="about">
+
+      <span class="border tl">&#10024;</span>
+      <span class="border tr">&#10024;</span>
+      <span class="border bl">&#10024;</span>
+      <span class="border br">&#10024;</span>
+
+      <h1>About Us &#x2764; </h1> 
+      <p>
+        Welcome to the UPTM student tools app! Our app is designed to make your life as a student at UPTM easier and more productive. 
+        Whether you're a new student just starting out or a seasoned pro, our app has everything you need to succeed.
+      </p>
+
+    </div>
+
+    <br><br>
+
+    <div class="banner"><div class="banner--inner"><span class="banner--content">CONTACT US</span></div></div>
+    
+    <br><br>
+
+    <div class="container">
+      <h2 class="title">
+        <span class="title-word title-word-1">PRESS&nbsp;</span>
+        <span class="title-word title-word-2">THE&nbsp;</span>
+        <span class="title-word title-word-3">MAIL&nbsp;</span>
+        <span class="title-word title-word-4">BELOW</span>
+      </h2>
+    </div>
+
+    <div class="letter-image" (click)="presentAlert()">
+      <div class="animated-mail">
+        <div class="back-fold"></div>
+        <div class="letter">
+          <div class="letter-border"></div>
+          <div class="letter-title"></div>
+          <div class="letter-context"></div>
+          <div class="letter-stamp">
+            <div class="letter-stamp-inner"></div>
+          </div>
+        </div>
+        <div class="top-fold"></div>
+        <div class="body"></div>
+        <div class="left-fold"></div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+
+    <br><br><br><br><br><br>
+    
+    
+  </ion-content>
+</ion-app>

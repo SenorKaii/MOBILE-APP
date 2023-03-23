@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+   <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <p class="ion-text-center">University Poly-Tech Malaysia <br> Student Tools</p><br>
+  <div class="input-group">
+    <ion-item>
+      <ion-input placeholder="Enter your email" type="text" [(ngModel)]="user.studentEmail" required></ion-input >
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input placeholder="Enter your password" type="password" [(ngModel)]="user.password" required></ion-input >
+    </ion-item>
+  </div>
+
+    <ion-button class="ion-padding" expand="block" color="primary" (click)="login(user)">
+      Log in
+    </ion-button>
+</ion-content>
